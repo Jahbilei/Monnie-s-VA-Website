@@ -10,7 +10,7 @@ A website portfolio showcasing my skills and expertise.
 
 ### Developer
 
-- [Jah](https://github.com/5t4l3x)
+- [Jah](https://github.com/Jahbilei)
 
 ### User
 
