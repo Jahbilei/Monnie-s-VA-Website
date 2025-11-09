@@ -1,166 +1,96 @@
+// components/navbar.js
+
 class CustomNavbar extends HTMLElement {
-    connectedCallback() {
-        this.attachShadow({ mode: 'open' });
-        this.shadowRoot.innerHTML = `
-            <style>
-                :host {
-                    display: block;
-                    position: fixed;
-                    width: 100%;
-                    top: 0;
-                    left: 0;
-                    z-index: 1000;
-                    background-color: rgba(28, 37, 51, 0.85);
-                    backdrop-filter: blur(8px);
-                    -webkit-backdrop-filter: blur(8px);
-                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-                    transition: all 0.3s ease;
-                }
-                
-                .navbar-container {
-                    max-width: 1200px;
-                    margin: 0 auto;
-                    padding: 1rem 2rem;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                }
-                
-                .logo {
-                    font-family: 'Lora', serif;
-                    font-size: 1.5rem;
-                    font-weight: 700;
-                    color: white;
-                    text-decoration: none;
-                }
-                
-                .logo span {
-                    color: #e54d24;
+  connectedCallback() {
+    this.innerHTML = `
+<style>
+        /* FIX: Replaced var(--orange-400) with the hex code (#e54d24) for reliability */
+        .nav-item-effect {
+            position: relative;
+            display: inline-block; 
+        }
+
+        .nav-item-effect::after {
+            content: '';
+            position: absolute;
+            bottom: -5px; 
+            left: 0;
+            width: 0; 
+            height: 2px; 
+            /* Fixed color code for the sliding line */
+            background-color: #e54d24; 
+            
+            transition: width 0.3s ease-out;
+        }
+
+        .nav-item-effect:hover::after {
+            width: 100%; 
+        }
+      </style>
+      
+      <nav class="fixed top-0 left-0 right-0 z-50 bg-charcoal/90 backdrop-blur-sm shadow-md text-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+          <div class="flex justify-between items-center h-20">
+            
+            <a href="#home" class="font-serif text-2xl font-bold text-rose-gold">
+              <span class="text-white">Your VA: Monnie</span>.
+            </a>
+
+            <ul id="nav-links" class="hidden md:flex items-center space-x-8">
+              <li><a href="#home" class="nav-link nav-item-effect text-white hover:text-rose-gold">Home</a></li>
+              <li><a href="#about" class="nav-link nav-item-effect text-white hover:text-rose-gold">About</a></li>
+              <li><a href="#services" class="nav-link nav-item-effect text-white hover:text-rose-gold">Services</a></li>
+              <li><a href="#packages" class="nav-link nav-item-effect text-white hover:text-rose-gold">Packages</a></li>
+              <li>
+                <a href="#contact" class="bg-rose-gold text-white px-5 py-2 rounded-full font-semibold">
+                  Contact
+                </a>
+              </li>
+            </ul>
+
+            <button id="menu-toggle-btn" class="md:hidden text-white">
+              <i data-feather="menu" class="w-7 h-7"></i>
+            </button>
+
+          </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-charcoal/90 backdrop-blur-sm">
+          <ul class="flex flex-col items-center py-4 space-y-2 text-white">
+            <li><a href="#home" class="block py-2 nav-item-effect hover:text-rose-gold">Home</a></li>
+            <li><a href="#about" class="block py-2 nav-item-effect hover:text-rose-gold">About</a></li>
+            <li><a href="#services" class="block py-2 nav-item-effect hover:text-rose-gold">Services</a></li>
+            <li><a href="#packages" class="block py-2 nav-item-effect hover:text-rose-gold">Packages</a></li>
+            <li class="py-2">
+              <a href="#contact" class="bg-rose-gold text-white px-5 py-2 rounded-full font-semibold">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    `;
+
+    // --- JavaScript Logic for Toggling the Menu (No changes here) ---
+    const toggleBtn = this.querySelector('#menu-toggle-btn');
+    const mobileMenu = this.querySelector('#mobile-menu');
+
+    if (toggleBtn && mobileMenu) {
+      toggleBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    if (typeof feather !== 'undefined') {
+      feather.replace();
+    }
+  }
 }
-                
-                .nav-links {
-                    display: flex;
-                    gap: 2rem;
-                }
-                
-                .nav-link {
-                    color: white;
-                    text-decoration: none;
-                    font-weight: 500;
-                    transition: color 0.3s;
-                    position: relative;
-                }
-                
-                .nav-link:hover {
-                    color: #e54d24; /* theme orange */
-                }
-
-                .nav-link::after {
-                    content: '';
-                    position: absolute;
-                    bottom: -5px;
-                    left: 0;
-                    width: 0;
-                    height: 2px;
-                    background-color: #e54d24;
-                    transition: width 0.3s;
-                }
-
-                .nav-link:hover::after {
-                    width: 100%;
-                }
-                
-                .mobile-menu-btn {
-                    display: none;
-                    background: none;
-                    border: none;
-                    color: white;
-                    font-size: 1.5rem;
-                    cursor: pointer;
-                }
-                
-                @media (max-width: 768px) {
-                    .nav-links {
-                        position: fixed;
-                        top: 70px;
-                        left: 0;
-                        width: 100%;
-                        background-color: rgba(28, 37, 51, 0.95);
-                        backdrop-filter: blur(8px);
-                        -webkit-backdrop-filter: blur(8px);
-                        flex-direction: column;
-                        align-items: center;
-                        padding: 1rem 0;
-                        gap: 1rem;
-                        transform: translateY(-150%);
-                        transition: transform 0.3s ease;
-                        z-index: 999;
-                        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-                    }
-                    
-                    .nav-links.active {
-                        transform: translateY(0);
-                    }
-                    
-                    .mobile-menu-btn {
-                        display: block;
-                    }
-                }
-            </style>
-            <div class="navbar-container">
-                <a href="#home" class="logo"> Your VA: Monnie<span>.</span></a>
-                <nav class="nav-links">
-                    <a href="#home" class="nav-link">Home</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#services" class="nav-link">Services</a>
-                    <a href="#packages" class="nav-link">Packages</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </nav>
-<button class="mobile-menu-btn">
-                    <i data-feather="menu"></i>
-                </button>
-            </div>
-        `;
-        // Initialize mobile menu toggle
-        const menuBtn = this.shadowRoot.querySelector('.mobile-menu-btn');
-        const navLinks = this.shadowRoot.querySelector('.nav-links');
-        
-        menuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            feather.replace();
-        });
-// Replace icons
-        this.shadowRoot.querySelectorAll('i').forEach(icon => {
-            feather.replace(icon);
-        });
-        // Enhanced scroll behavior for navbar
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                this.classList.add('scrolled');
-            } else {
-                this.classList.remove('scrolled');
-            }
-        });
-
-        // Add keyboard navigation support
-        this.shadowRoot.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('focus', () => {
-                link.classList.add('focus-visible');
-            });
-            link.addEventListener('blur', () => {
-                link.classList.remove('focus-visible');
-            });
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!this.contains(e.target) && navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-            }
-        });
-}
-}
-
 
 customElements.define('custom-navbar', CustomNavbar);
-
