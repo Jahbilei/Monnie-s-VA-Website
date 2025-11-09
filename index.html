@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monnie | Virtual Assistant</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/faq-accordion.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lora:wght@400;700&display=swap");
+    </style>
+  </head>
+  <body class="font-sans bg-gray-50 text-gray-800">
+    <custom-navbar></custom-navbar>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="relative min-h-screen flex flex-col md:flex-row pt-20"
+    >
+      <div class="md:w-1/2 flex flex-col justify-center p-8 md:p-16 xl:pl-32">
+        <h1 class="font-serif text-5xl md:text-6xl font-bold mb-6">
+          Simplifying Operations.<br />Maximizing Growth.
+        </h1>
+        <a
+          href="#contact"
+          class="bg-rose-gold text-white px-8 py-4 rounded-full text-lg font-semibold inline-block w-max"
+          >Book Free Consultation</a
+        >
+      </div>
+      <div
+        class="md:w-1/2 relative flex items-center justify-center bg-gradient-to-br from-orange-100 to-rose-gold-light min-h-[calc(100vh-5rem)]"
+      >
+        <img
+          src="https://huggingface.co/spaces/Wisisi/monnie-s-virtual-rose-gold-touch/resolve/main/images/Adobe%20Express%20-%20file.png"
+          alt="Monnie Virtual Assistant"
+          class="w-full h-full object-cover object-top max-w-2xl animate-float"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-l from-gray-50 to-transparent md:bg-gradient-to-r from-transparent to-white opacity-70"
+        ></div>
+      </div>
+    </section>
+    <!-- About Me -->
+    <section
+      id="about"
+      class="py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto relative">
+        <div
+          class="absolute -left-20 -top-20 w-64 h-64 bg-gradient-to-br from-rose-gold to-rose-gold-light opacity-10 transform rotate-45 rounded-full blur-2xl"
+        ></div>
+        <div
+          class="absolute right-0 bottom-0 w-96 h-96 bg-gradient-to-tl from-orange-100 to-transparent opacity-20 transform -rotate-12 rounded-full blur-3xl pointer-events-none"
+        ></div>
+        <div class="flex flex-col items-center text-center">
+          <div class="max-w-3xl">
+            <h2 class="font-serif text-4xl md:text-5xl font-bold mb-8">
+              Meet Your Behind-The-Scenes Partner
+            </h2>
+            <p class="text-lg md:text-xl mb-8 leading-relaxed">
+              Hi, I'm Monnie—a virtual assistant with 7+ years of experience
+              helping international clients stay organized, grow their brands,
+              and run smoother businesses. Whether you need inbox management,
+              digital marketing, or branding support, I'm here to help you do
+              less and achieve more.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div
+                class="flex items-start gap-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              >
+                <div
+                  class="bg-gradient-to-br from-rose-gold to-rose-gold-light p-3 rounded-full shadow-md"
+                >
+                  <i data-feather="inbox" class="text-white w-5 h-5"></i>
+                </div>
+                <div class="text-left">
+                  <h3 class="font-semibold">Inbox & Calendar</h3>
+                  <p class="text-sm text-gray-600">Efficient management</p>
+                </div>
+              </div>
+              <div
+                class="flex items-start gap-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              >
+                <div
+                  class="bg-gradient-to-br from-rose-gold to-rose-gold-light p-3 rounded-full shadow-md"
+                >
+                  <i data-feather="mail" class="text-white w-5 h-5"></i>
+                </div>
+                <div class="text-left">
+                  <h3 class="font-semibold">Email Marketing</h3>
+                  <p class="text-sm text-gray-600">Campaign execution</p>
+                </div>
+              </div>
+              <div
+                class="flex items-start gap-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              >
+                <div
+                  class="bg-gradient-to-br from-rose-gold to-rose-gold-light p-3 rounded-full shadow-md"
+                >
+                  <i data-feather="trending-up" class="text-white w-5 h-5"></i>
+                </div>
+                <div class="text-left">
+                  <h3 class="font-semibold">Process Optimization</h3>
+                  <p class="text-sm text-gray-600">Streamlined workflows</p>
+                </div>
+              </div>
+              <div
+                class="flex items-start gap-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              >
+                <div
+                  class="bg-gradient-to-br from-rose-gold to-rose-gold-light p-3 rounded-full shadow-md"
+                >
+                  <i data-feather="users" class="text-white w-5 h-5"></i>
+                </div>
+                <div class="text-left">
+                  <h3 class="font-semibold">Client Onboarding</h3>
+                  <p class="text-sm text-gray-600">Seamless transitions</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services -->
+    <section
+      id="services"
+      class="py-12 md:py-16 px-4 md:px-6 lg:px-8 bg-gray-100"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="font-serif text-4xl md:text-5xl font-bold mb-3">
+            Comprehensive Services
+          </h2>
+          <p class="text-lg md:text-xl max-w-3xl mx-auto">
+            Tailored solutions to streamline your business operations
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Service Card 1 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-md group hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-gray-100"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="bg-gradient-to-br from-rose-gold to-rose-gold-light p-3 rounded-lg shadow-md"
+              >
+                <i data-feather="briefcase" class="text-white w-8 h-8"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-800 group-hover:text-rose-gold transition-colors duration-300"
+              >
+                Administrative Support
+              </h3>
+            </div>
+            <p class="text-gray-600 mb-6">
+              Email management, calendar scheduling, travel arrangements, and
+              general admin tasks to keep your business running smoothly.
+            </p>
+          </div>
+          <!-- Service Card 2 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-md group hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-gray-100"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="bg-gradient-to-br from-rose-gold to-rose-gold-light p-3 rounded-lg shadow-md"
+              >
+                <i data-feather="bar-chart-2" class="text-white w-8 h-8"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-800 group-hover:text-rose-gold transition-colors duration-300"
+              >
+                Digital Marketing
+              </h3>
+            </div>
+            <p class="text-gray-600 mb-6">
+              Social media management, email campaigns, content scheduling, and
+              analytics reporting to grow your online presence.
+            </p>
+          </div>
+          <!-- Service Card 3 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-md group hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-gray-100"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="bg-gradient-to-br from-rose-gold to-rose-gold-light p-3 rounded-lg shadow-md"
+              >
+                <i data-feather="headphones" class="text-white w-8 h-8"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-800 group-hover:text-rose-gold transition-colors duration-300"
+              >
+                Customer Support
+              </h3>
+            </div>
+            <p class="text-gray-600 mb-6">
+              Deliver exceptional service. I handle client communication,
+              respond to inquiries, and provide reliable support that
+              strengthens your customer relationships.
+            </p>
+          </div>
+          <!-- Service Card 4 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-md group hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-gray-100"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="bg-gradient-to-br from-rose-gold to-rose-gold-light p-3 rounded-lg shadow-md"
+              >
+                <i data-feather="user-plus" class="text-white w-8 h-8"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-800 group-hover:text-rose-gold transition-colors duration-300"
+              >
+                Client Onboarding
+              </h3>
+            </div>
+            <p class="text-gray-600 mb-6">
+              Streamlined onboarding processes, welcome sequences, and CRM
+              management to create exceptional first impressions.
+            </p>
+          </div>
+          <!-- Service Card 5 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-md group hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-gray-100"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="bg-gradient-to-br from-rose-gold to-rose-gold-light p-3 rounded-lg shadow-md"
+              >
+                <i data-feather="clipboard" class="text-white w-8 h-8"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-800 group-hover:text-rose-gold transition-colors duration-300"
+              >
+                Project Coordination
+              </h3>
+            </div>
+            <p class="text-gray-600 mb-6">
+              End-to-end project management, milestone tracking, and team
+              coordination to keep initiatives on schedule.
+            </p>
+          </div>
+          <!-- Service Card 6 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-md group hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-gray-100"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="bg-gradient-to-br from-rose-gold to-rose-gold-light p-3 rounded-lg shadow-md"
+              >
+                <i data-feather="search" class="text-white w-8 h-8"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-800 group-hover:text-rose-gold transition-colors duration-300"
+              >
+                Research & Data Management
+              </h3>
+            </div>
+            <p class="text-gray-600 mb-6">
+              Market research, competitor analysis, data organization, and
+              reporting to support informed decision-making.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Familiar Tools -->
+    <section class="py-12 md:py-16 px-4 md:px-6 lg:px-8 bg-gray-100">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-10">
+          <h2 class="font-serif text-4xl md:text-5xl font-bold mb-3">
+            Software Proficiency
+          </h2>
+          <p class="text-lg md:text-xl max-w-3xl mx-auto">
+            Seamless integration with your existing tech stack
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 max-w-5xl mx-auto gap-3 md:gap-4"
+        >
+          <div
+            class="bg-white p-4 md:p-6 rounded-xl flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 group"
+          >
+            <div class="bg-gray-50 p-4 rounded-full mb-4">
+              <img src="icons/asana.png" alt="Asana" class="h-8" />
+            </div>
+            <h3 class="text-sm font-medium mb-2">Asana</h3>
+            <div class="flex space-x-1">
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.1s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.2s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.3s"
+              >
+                ★
+              </div>
+              <div
+                class="text-gray-300 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.4s"
+              >
+                ★
+              </div>
+              <div
+                class="text-gray-300 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.5s"
+              >
+                ★
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 group"
+          >
+            <img src="icons/notion.png" alt="Notion" class="h-16 mb-4" />
+            <h3 class="text-lg font-semibold mb-2">Notion</h3>
+            <div class="flex space-x-1">
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.1s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.2s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.3s"
+              >
+                ★
+              </div>
+              <div
+                class="text-gray-300 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.4s"
+              >
+                ★
+              </div>
+              <div
+                class="text-gray-300 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.5s"
+              >
+                ★
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 group"
+          >
+            <img src="icons/clickup.png" alt="ClickUp" class="h-16 mb-4" />
+            <h3 class="text-lg font-semibold mb-2">ClickUp</h3>
+            <div class="flex space-x-1">
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.1s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.2s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.3s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.4s"
+              >
+                ★
+              </div>
+              <div
+                class="text-gray-300 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.5s"
+              >
+                ★
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 group"
+          >
+            <img src="icons/mainchip.png" alt="Mailchimp" class="h-16 mb-4" />
+            <h3 class="text-lg font-semibold mb-2">Mailchimp</h3>
+            <div class="flex space-x-1">
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.1s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.2s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.3s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.4s"
+              >
+                ★
+              </div>
+              <div
+                class="text-gray-300 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.5s"
+              >
+                ★
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 group"
+          >
+            <img src="icons/ghl.png" alt="Go High Level" class="h-16 mb-4" />
+            <h3 class="text-lg font-semibold mb-2">Go High Level</h3>
+            <div class="flex space-x-1">
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.1s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.2s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.3s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.4s"
+              >
+                ★
+              </div>
+              <div
+                class="text-gray-300 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.5s"
+              >
+                ★
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 group"
+          >
+            <img src="icons/netsuite.svg" alt="Netsuite" class="h-16 mb-4" />
+            <h3 class="text-lg font-semibold mb-2">Netsuite</h3>
+            <div class="flex space-x-1">
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.1s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.2s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.3s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.4s"
+              >
+                ★
+              </div>
+              <div
+                class="text-gray-300 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.5s"
+              >
+                ★
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 group"
+          >
+            <img src="icons/gw.png" alt="Google Workspace" class="h-16 mb-4" />
+            <h3 class="text-lg font-semibold mb-2">Google Workspace</h3>
+            <div class="flex space-x-1">
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.1s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.2s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.3s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.4s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.5s"
+              >
+                ★
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 group"
+          >
+            <img src="icons/m365.png" alt="Microsoft 365" class="h-16 mb-4" />
+            <h3 class="text-lg font-semibold mb-2">Microsoft 365</h3>
+            <div class="flex space-x-1">
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.1s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.2s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.3s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.4s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.5s"
+              >
+                ★
+              </div>
+            </div>
+          </div>
+          <!-- Additional software cards added: Canva, Copilot, ChatGPT, Trackdesk -->
+          <div
+            class="bg-white p-6 rounded-xl flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 group software-card"
+          >
+            <div>
+              <img src="icons/canva.png" alt="Canva" class="h-16 mb-4" />
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Canva</h3>
+            <div class="flex space-x-1">
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.1s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.2s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.3s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.4s"
+              >
+                ★
+              </div>
+              <div
+                class="text-gray-300 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.5s"
+              >
+                ★
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 group software-card"
+          >
+            <div>
+              <img src="icons/copilot.webp" alt="Copilot" class="h-16 mb-4" />
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Copilot</h3>
+            <div class="flex space-x-1">
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.1s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.2s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.3s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.4s"
+              >
+                ★
+              </div>
+              <div
+                class="text-gray-300 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.5s"
+              >
+                ★
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 group software-card"
+          >
+            <div>
+              <img src="icons/chatgpt.png" alt="ChatGPT" class="h-16 mb-4" />
+            </div>
+            <h3 class="text-lg font-semibold mb-2">ChatGPT</h3>
+            <div class="flex space-x-1">
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.1s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.2s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.3s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.4s"
+              >
+                ★
+              </div>
+              <div
+                class="text-gray-300 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.5s"
+              >
+                ★
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 group software-card"
+          >
+            <div>
+              <img
+                src="icons/trackdesk.png"
+                alt="Trackdesk"
+                class="h-16 mb-4"
+              />
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Trackdesk</h3>
+            <div class="flex space-x-1">
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.1s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.2s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.3s"
+              >
+                ★
+              </div>
+              <div
+                class="text-orange-400 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.4s"
+              >
+                ★
+              </div>
+              <div
+                class="text-gray-300 transform group-hover:scale-110 transition-transform duration-300"
+                style="animation-delay: 0.5s"
+              >
+                ★
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Packages -->
+    <section
+      id="packages"
+      class="py-16 px-4 md:px-8 lg:px-16 bg-charcoal text-white relative"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4">
+            Flexible Packages
+          </h2>
+          <p class="text-lg md:text-xl max-w-3xl mx-auto">
+            Choose the perfect level of support for your business needs
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Package 1 -->
+          <div
+            class="bg-white text-gray-800 p-8 rounded-xl shadow-xl relative overflow-hidden group hover:shadow-2xl transition-all duration-300"
+          >
+            <div
+              class="absolute -top-6 -right-6 w-32 h-32 bg-rose-gold opacity-10 rounded-full"
+            ></div>
+            <div class="flex items-center justify-between mb-6">
+              <h3 class="text-2xl font-bold text-rose-gold">Quick Start</h3>
+              <div
+                class="bg-rose-gold-light text-rose-gold px-3 py-1 rounded-full text-sm font-medium"
+              >
+                Popular
+              </div>
+            </div>
+            <p class="text-3xl font-bold mb-6">
+              $50<span class="text-lg font-normal">/month</span>
+            </p>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start gap-3">
+                <div class="bg-rose-gold-light p-1 rounded-full mt-1">
+                  <i data-feather="check" class="text-rose-gold w-4 h-4"></i>
+                </div>
+                <div>
+                  <span class="font-medium">10 Hours/Month</span>
+                  <p class="text-sm text-gray-500">Basic support</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="text-rose-gold mr-2 mt-1"></i>
+                <span>Email & Calendar Support</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="text-rose-gold mr-2 mt-1"></i>
+                <span>Weekly Check-ins</span>
+              </li>
+            </ul>
+            <a
+              href="#contact"
+              class="bg-rose-gold text-white px-6 py-3 rounded-full font-semibold block text-center"
+              >Get Started</a
+            >
+          </div>
+          <!-- Package 2 -->
+          <div
+            class="bg-white text-gray-800 p-8 rounded-lg shadow-xl relative overflow-hidden"
+          >
+            <div
+              class="absolute -top-6 -right-6 w-32 h-32 bg-rose-gold opacity-10 rounded-full"
+            ></div>
+            <h3 class="text-2xl font-bold mb-4 text-rose-gold">
+              The Growth Partner
+            </h3>
+            <p class="text-3xl font-bold mb-6">
+              $100<span class="text-lg">/month</span>
+            </p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start">
+                <i data-feather="check" class="text-rose-gold mr-2 mt-1"></i>
+                <span>40 Hours/Month</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="text-rose-gold mr-2 mt-1"></i>
+                <span>Full Administrative Support</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="text-rose-gold mr-2 mt-1"></i>
+                <span>Digital Marketing Assistance</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="text-rose-gold mr-2 mt-1"></i>
+                <span>Daily Communication</span>
+              </li>
+            </ul>
+            <a
+              href="#contact"
+              class="bg-rose-gold text-white px-6 py-3 rounded-full font-semibold block text-center hover:bg-rose-gold-dark transition duration-300"
+              >Get Started</a
+            >
+          </div>
+          <!-- Package 3 -->
+          <div
+            class="bg-white text-gray-800 p-8 rounded-lg shadow-xl relative overflow-hidden"
+          >
+            <div
+              class="absolute -top-6 -right-6 w-32 h-32 bg-rose-gold opacity-10 rounded-full"
+            ></div>
+            <h3 class="text-2xl font-bold mb-4 text-rose-gold">
+              Custom Project
+            </h3>
+            <p class="text-3xl font-bold mb-6">
+              $10<span class="text-lg">/hour</span>
+            </p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start">
+                <i data-feather="check" class="text-rose-gold mr-2 mt-1"></i>
+                <span>Flexible Hourly Rate</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="text-rose-gold mr-2 mt-1"></i>
+                <span>Perfect for One-time Projects</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="text-rose-gold mr-2 mt-1"></i>
+                <span>Pay As You Go</span>
+              </li>
+            </ul>
+            <a
+              href="#contact"
+              class="bg-rose-gold text-white px-6 py-3 rounded-full font-semibold block text-center hover:bg-rose-gold-dark transition duration-300"
+              >Get Started</a
+            >
+          </div>
+        </div>
+        <p class="text-center mt-12">
+          All packages include a free 30-minute onboarding call and weekly
+          progress reports.
+        </p>
+      </div>
+    </section>
+    <!-- The Monnie Method -->
+    <section class="py-16 px-4 md:px-8 lg:px-16 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4">
+            Proven Methodology
+          </h2>
+          <p class="text-lg md:text-xl max-w-3xl mx-auto">
+            A structured approach to delivering exceptional results
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="group text-center p-8 bg-gradient-to-b from-white to-gray-50 rounded-xl hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 animate-on-scroll"
+            style="--delay: 1"
+          >
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-rose-gold to-rose-gold-light text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg transform group-hover:scale-110 transition-transform duration-300"
+            >
+              1
+            </div>
+            <div
+              class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-gradient-to-b group-hover:from-white group-hover:to-gray-50"
+            >
+              <h3
+                class="text-xl font-bold mb-3 text-rose-gold group-hover:scale-105 transition-transform duration-300"
+              >
+                Discovery
+              </h3>
+              <p class="text-gray-600">
+                Initial call to assess your needs, pain points, and goals to
+                create a customized support plan.
+              </p>
+            </div>
+          </div>
+          <div
+            class="group text-center p-8 bg-gradient-to-b from-white to-gray-50 rounded-xl hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 animate-on-scroll"
+            style="--delay: 2"
+          >
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-rose-gold to-rose-gold-light text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg transform group-hover:scale-110 transition-transform duration-300"
+            >
+              2
+            </div>
+            <div
+              class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-gradient-to-b group-hover:from-white group-hover:to-gray-50"
+            >
+              <h3
+                class="text-xl font-bold mb-3 text-rose-gold group-hover:scale-105 transition-transform duration-300"
+              >
+                System Setup
+              </h3>
+              <p class="text-gray-600">
+                Establishing tools, creating SOPs, and setting up processes
+                tailored to your business.
+              </p>
+            </div>
+          </div>
+          <div
+            class="group text-center p-8 bg-gradient-to-b from-white to-gray-50 rounded-xl hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 animate-on-scroll"
+            style="--delay: 3"
+          >
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-rose-gold to-rose-gold-light text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg transform group-hover:scale-110 transition-transform duration-300"
+            >
+              3
+            </div>
+            <div
+              class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group-hover:bg-gradient-to-b group-hover:from-white group-hover:to-gray-50"
+            >
+              <h3
+                class="text-xl font-bold mb-3 text-rose-gold group-hover:scale-105 transition-transform duration-300"
+              >
+                Launch & Scale
+              </h3>
+              <p class="text-gray-600">
+                Weekly execution, progress reporting, and continuous
+                optimization as your business grows.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact -->
+    <section
+      id="contact"
+      class="py-12 md:py-16 px-4 md:px-6 lg:px-8 bg-charcoal text-white"
+    >
+      <div class="max-w-6xl mx-auto relative">
+        <div class="contact-deco" aria-hidden="true"></div>
+        <div class="text-center mb-10">
+          <h2
+            class="font-serif text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-rose-gold to-orange-300 bg-clip-text text-transparent animate-on-scroll leading-normal py-2"
+          >
+            Ready to Hand Off the Stress?
+          </h2>
+          <p
+            class="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
+            style="--delay: 1"
+          >
+            Book a free consultation call and let's discuss how I can help
+            streamline your business operations.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 items-start">
+          <!-- Compact contact cards (left) -->
+          <div class="space-y-4">
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+              <h3 class="text-xl font-bold text-rose-gold mb-1">
+                Get In Touch
+              </h3>
+              <p class="text-sm text-gray-300 mb-3">
+                Book a free 30-min consultation or send a message — typical
+                reply within 48 hours.
+              </p>
+              <ul class="text-sm text-gray-300 space-y-1 mb-3">
+                <li>
+                  Email:
+                  <a
+                    href="mailto:cloudclerks@gmail.com"
+                    class="text-rose-gold underline"
+                    >cloudclerks@gmail.com</a
+                  >
+                </li>
+              </ul>
+              <div class="flex items-center space-x-4">
+                <a
+                  href="https://wa.me/09814632961?text=Hi%20Monnie,%20I'm%20interested%20in%20your%20services"
+                  target="_blank"
+                  class="text-gray-300 hover:text-rose-gold transition-colors"
+                  aria-label="WhatsApp"
+                >
+                  <i data-feather="message-circle" class="w-5 h-5"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/va_monnieph/"
+                  target="_blank"
+                  class="text-gray-300 hover:text-rose-gold transition-colors"
+                  aria-label="Instagram"
+                >
+                  <i data-feather="instagram" class="w-5 h-5"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com/share/1GNXoBPRTg/"
+                  target="_blank"
+                  class="text-gray-300 hover:text-rose-gold transition-colors"
+                  aria-label="Facebook"
+                >
+                  <i data-feather="facebook" class="w-5 h-5"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Hours removed for a tighter contact area -->
+          </div>
+
+          <!-- Minimal contact form (right) -->
+          <form
+            id="contact-form"
+            class="bg-gray-800 p-4 rounded-lg shadow-lg space-y-2 compact-form"
+            aria-label="Contact form"
+            method="post"
+            action="#"
+          >
+            <div>
+              <label class="sr-only" for="contact-name">Name</label>
+              <input
+                id="contact-name"
+                name="name"
+                required
+                class="w-full px-3 py-2 rounded bg-gray-900 border border-gray-700 text-white"
+                placeholder="Your name"
+              />
+            </div>
+            <div>
+              <label class="sr-only" for="contact-email">Email</label>
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                required
+                class="w-full px-3 py-2 rounded bg-gray-900 border border-gray-700 text-white"
+                placeholder="you@email.com"
+              />
+            </div>
+            <div>
+              <label class="sr-only" for="contact-message">Message</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows="4"
+                required
+                class="w-full px-3 py-2 rounded bg-gray-900 border border-gray-700 text-white"
+                placeholder="How can I help?"
+              ></textarea>
+            </div>
+            <div class="flex items-center justify-end">
+              <button
+                type="submit"
+                class="bg-rose-gold text-white px-4 py-2 rounded-full font-semibold hover:shadow-xl"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-charcoal text-white py-12 px-4 text-center">
+      <p>&copy; 2025 Monnie Virtual Assistant. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      feather.replace();
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "rose-gold": "#e54d24",
+              "rose-gold-light": "#f28b6f",
+              "rose-gold-dark": "#c23e1b",
+              charcoal: "#1C2533",
+            },
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+              serif: ["Lora", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </body>
+</html>
