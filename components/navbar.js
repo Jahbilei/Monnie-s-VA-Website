@@ -108,7 +108,7 @@ class CustomNavbar extends HTMLElement {
                 }
             </style>
             <div class="navbar-container">
-                <a href="/" class="logo">Monnie<span>.</span></a>
+                <a href="#home" class="logo">Monnie<span>.</span></a>
                 <nav class="nav-links">
                     <a href="#home" class="nav-link">Home</a>
                     <a href="#about" class="nav-link">About</a>
@@ -160,5 +160,6 @@ class CustomNavbar extends HTMLElement {
         });
 }
 }
+
 
 customElements.define('custom-navbar', CustomNavbar);
