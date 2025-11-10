@@ -48,8 +48,8 @@ class CustomNavbar extends HTMLElement {
         <div class="max-w-7xl mx-auto px-4 md:px-8">
           <div class="flex justify-between items-center h-20">
             
-            <a href="#home" class="font-serif text-2xl font-bold text-rose-gold">
-              <span class="text-white">Your VA: Monnie</span>
+           <a href="#home" class="font-serif text-lg md:text-2xl font-bold text-rose-gold whitespace-nowrap">
+  <span class="text-white">Monnie</span>.<span class="text-white"> | Your Virtual Assistant</span>
             </a>
             
             <div class="hidden md:flex items-center space-x-6">
@@ -108,3 +108,4 @@ class CustomNavbar extends HTMLElement {
 }
 
 customElements.define('custom-navbar', CustomNavbar);
+
